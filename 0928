@@ -1,0 +1,63 @@
+#벌집
+# n = int(input())    #현재 방
+#
+# # 방 n방까지 가는데에 지나야하는 방의 수를 구하시오
+# # 1층 = 방 1
+# # 2층 = 방 2 ~ 방 7    (+6)
+# # 3층 = 방 8 ~ 방 19   (+12)
+# # 4층 = 방 20 ~ 방 37  (+18)
+# layer = 1       # 층
+# end_room = 1    # 해당 층에 마지막 방
+#
+# while end_room< n:
+#     layer += 1
+#     end_room += 6 * (layer - 1)
+#     print(f"layer = {layer}, end_room = {end_room}")
+#     if end_room > n:
+#         break
+#
+# print(layer)
+
+
+#설탕 배달
+# n = int(input())    #설탕의 총 무게
+#
+# cnt = 0
+# while n > 0:
+#     if n % 5 == 0:
+#         cnt += n // 5
+#         break
+#     n -= 3
+#     cnt += 1
+# if n < 0:
+#     cnt = -1
+# print(cnt)
+
+
+#달팽이쨩은 올라가고파
+# q = 2       #낮에 올라가는 높이
+# w = 1       #밤에 내려오는 높이
+# e = 5       #막대의 높이
+#
+# day = 0         # 달팽이가 올라간 날짜
+# height = 0      # 현재 달팽이의 높이
+# #점화식을 세운다.
+# day = int((e - w) / (q - w))   #하루에 올라가는 높이
+# print(day)
+
+
+#부녀회쨩이 될테얌>.<
+# t = int(input())
+# # k층 n호에 거주하는 거주민 수를 구하시오
+# for _ in range(t):
+#     k = int(input())    #층
+#     n = int(input())    #호
+#     zero = list(range(1,n+1))   #[1,2,3]
+#     apart = [zero]
+#     for i in range(1,k+1):  #층
+#         floor = []
+#         for j in range(1,n+1):  #호
+#             floor.append(sum(apart[i-1][:j]))
+#         apart.append(floor)
+#     print(apart)
+#     print(apart[k][n-1])
